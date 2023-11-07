@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1UQXdPVEUyTVRZMU9Gb1hEVE16TVRBd05qRTJNVFkxT0Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTHBJCkZBN1NCRStRTmZuV0RkNEJkMkszSGtRallVMTFDdU51d2d3UENtZEhOcmpWYm9WMTgxUkpCcHVkVFFaeDRieXgKYkhKMjhmTHRkUFlWVFRIR1FtMmZMaERxYTJtdVlZZnBxQWxxVmJiMGVaRitGbHFjY3pHMlVNbXpwcUtyQzRrUgp6d3JNSUowZEpVcXE3bFRXT1BqZXltTzQ0RytlSm40SFdEQnhsNEVYZWVSWmhFcWl3dXNYU08zN2cyRkxEQnZiCkgwYmV5ckJyQ1Zrb0FueG8yY0tucklBNkM2eEJQRnNkSjVacjNxRGNXQ2xRQ3A4cWlTRnM5bEU2UlcvWkhzSEMKWEF4dnphR2c5TEJSVHkrM0tXTE9RalJVM2hlMkl3MkJHVXhSSExQSlYzM2Y1TVNHYnllc1l4UWJXbkRoVTN5TApRMTZ0OHNuR2hlcXRTNEIycmhFQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZGM0NpT2MwT1JCcmlVSU9xbkNSN2xTaVJ5bkNNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSTZKZURROHNUNlU3WWUyTjY5VwplbW1kZW5sTi9rbTBnNW4ycDJ0OGR0WHM1ZDl4V2xEaSs2b2VNTnd5MVF4NjVhcnZ3b0QvbFJ0SitTK1psV3pVClFZdlZBajJjaHNCbld3WWFsTSsxeFJjWFJSS0VBNit4bTc2TWRkS0pwcTVNc0syV0hxbHhUYWppSXFRT29Bb1MKalp5L3R1Q1VBVlc3RkV6VUc2QmowVUl4aVRtMzVCempJSTBzNkNoejB0aVRKZ0hBVHpCanFEOFA3cktROWhOTwptMTNSM1U4Yy9NTHluUnYrRGYyWnZ2bkErd2JzWlZpNGtZcyt2QVora09ZV0tXSDVFQnFUSzkxWnh5bDRWK1pUCnBKWVZ0d0w1d1lBMjZYSWZ2UmZaNnowYWNwbkViM3NPTEpHaVpBbWxMY01yVldVQUFjUDNyY3dFUFFDNHVPa2QKdmRZPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://4C961008E491BA83438DA4CEDBC96932.gr7.ap-southeast-1.eks.amazonaws.com
+  name: arn:aws:eks:ap-southeast-1:229851613053:cluster/jawan
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-southeast-1:229851613053:cluster/jawan
+    user: arn:aws:eks:ap-southeast-1:229851613053:cluster/jawan
+  name: arn:aws:eks:ap-southeast-1:229851613053:cluster/jawan
+current-context: arn:aws:eks:ap-southeast-1:229851613053:cluster/jawan
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-southeast-1:229851613053:cluster/jawan
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - ap-southeast-1
+      - eks
+      - get-token
+      - --cluster-name
+      - jawan
+      command: aws
